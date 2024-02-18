@@ -7,6 +7,7 @@
 :root {
   --background-color: #d9c5ad;
   --h2: #c6c6eb;
+  --h2second: black;
   --h3: #f2500b;
   --h2-font: Arimo;
 }
@@ -93,6 +94,10 @@ h2 {
 .nav-menu.active {
   left: 0;
   z-index: 1000;
+}
+/*footer*/
+.col h3 {
+  color: var(--h2second);
 }
 
 /*stor menu gøres usyndelig*/
