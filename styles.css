@@ -10,7 +10,7 @@
   --h2second: black;
   --h3: #f2500b;
   --h2-font: Arimo;
-  --backgroundmain: #fdf2e4;
+  --backgroundmain: #f2dcc4;
 }
 
 body {
@@ -81,6 +81,7 @@ h2 {
   cursor: pointer;
   margin-left: 80%;
   margin-top: 5%;
+  margin-bottom: 5%;
   position: relative;
 }
 
@@ -136,7 +137,7 @@ li {
   margin-bottom: 4%;
 }
 
-a,
+.col a,
 .col h5 {
   text-decoration: none;
   color: var(--h2second);
@@ -192,7 +193,33 @@ a,
     font-weight: 700;
   }
 
+  .stor-menu a:hover {
+    color: #d3815d;
+  }
+
   .hamburger {
     display: none;
+  }
+
+  /*footer*/
+
+  .col {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 15%;
+  }
+
+  .col h3 {
+    margin-bottom: 1%;
+    font-size: 18px;
+  }
+
+  .col a {
+    font-size: 14px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
   }
 }
