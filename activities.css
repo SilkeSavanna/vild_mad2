@@ -1,111 +1,208 @@
+/* .londrina-solid-regular {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+
+  .arimo-<uniquifier> {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+:root {
+  --background-color: #d9c5ad;
+  --h2: #c6c6eb;
+  --h2second: black;
+  --h3: #f2500b;
+  --h2-font: Arimo;
+  --backgroundmain: #f2dcc4;
+}
+
+*/
+
+/* MOBILE */
 @media (max-width: 800px) {
   main {
-    margin-inline: 44px;
+    margin-inline: 25px;
+    /* styles main får den hvide frem ??? */
   }
 
   h1 {
     text-align: center;
-    margin-bottom: 25px;
-  }
-
-  .front img {
-    display: block;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-
-  .card {
-    position: relative;
-    text-align: center;
-    margin-bottom: 14px;
-  }
-
-  .frontcard h2 {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100%;
-    color: white;
+    margin: 25px 0;
+    font-family: "Londrina Solid", sans-serif;
+    letter-spacing: 2.5px;
+    color: #f2500b;
   }
 
   /* Carousel */
-  .carousel_container {
+  .carousel_flip_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .carousel_inner {
     position: relative;
     overflow: hidden;
+    margin-bottom: 12.5px;
   }
 
-  .carousel {
-    display: flex;
-    /* transition: transform 05s ease; */
-  }
-
+  /* nødvendig ellers skifter children back card indhold ikke */
   .card {
-    flex: 0 0 100%;
+    opacity: 0;
     width: 100%;
-    text-align: center;
-    transition: transform 0.5s ease;
+    height: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
   }
 
-  /* flips cards */
-  .card.active .front {
-    transform: rotateY(180deg);
-  }
-
-  .card.active .back {
-    transform: rotateY(180deg);
-  }
-
-  .front,
-  .back {
+  .card img {
     width: 100%;
-    height: auto;
-    position: absolute;
-    backface-visibility: hidden;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
-  .carousel_nav {
+  .card h2 {
+    width: 100%;
+    position: absolute;
+    top: 75%;
+    text-transform: uppercase;
     text-align: center;
-    height: 500px;
+    font-family: "Arimo", sans-serif;
+    color: #ffffff;
+    font-size: 26px;
   }
 
-  .dot {
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    background-color: grey;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
+  .card.active {
+    opacity: 1;
+    display: block;
   }
 
-  .dot.active {
-    background-color: orange;
-  }
-
-  /* 
-  button {
+  /* knapper til carousel */
+  .btn {
+    background: none;
     position: absolute;
-    top: 35%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.3);
-    color: orange;
+    top: 50%;
+    outline: none;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    padding: 10px;
-    font-size: 30px;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 400;
+    color: #f2500b;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .btn:active,
+  .btn:focus {
+    transform: translateY(-50%) scale(0.9);
+  }
+
+  .btn:hover {
+    transform: translateY(-50%) scale(0.96);
   }
 
   .prev {
-    left: 7px;
+    left: -7%;
   }
 
   .next {
-    right: 7px;
-  } */
+    right: -7%;
+  }
+
+  .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  .dots .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+  }
+
+  .dots .dot.active,
+  .dots .dot:hover {
+    background-color: #f2500b;
+  }
+
+  /* flip funktion */
+  .carousel_inner {
+    width: auto;
+    height: 450px;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    /* 3d flip effekt pålægges på children elementer også */
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* roterer 3d effekt flip */
+  .carousel_inner.active .card {
+    transform: rotateY(180deg);
+  }
+
+  .card_front,
+  .card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card_back {
+    background-image: url(img/activities_img/backcard.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    transform: rotateY(180deg);
+  }
+
+  .card_back h2 {
+    width: 100%;
+    position: absolute;
+    top: 5%;
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+
+  .card_back p {
+    width: 40ch;
+    font-size: 14px;
+    font-family: "Arimo", sans-serif;
+    line-height: 22px;
+    text-align: left;
+    margin: 20px 10px;
+  }
+
+  .card_back p a {
+    color: #ffffff;
+  }
+
+  #butterfly {
+    display: block;
+    position: absolute;
+    right: 65px;
+    top: 385px;
+    width: 10%;
+    height: auto;
+  }
 
   /* FORMULAR */
   form {
@@ -120,6 +217,12 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #007bff;
   }
 
   label,
