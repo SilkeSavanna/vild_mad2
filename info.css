@@ -23,7 +23,8 @@ main{
 }
 
 .product_image {
-    width: 90%;
+    width: 50%;
+    height: auto;
     grid-row: 1/3;
   }
   @media screen and (min-width: 600px) {
@@ -37,25 +38,18 @@ main{
 
   }
 }
-.brand_name{
+.category{
+  margin: 20px 0 20px 0;
+}
+.name{
     font-family: inter;
     font-weight: normal;
-    font-size: 1.4em;
-    margin-bottom: 15px;
+    font-size: 1.5em;
+    margin: 15px 0 15px 20px
 }
 .beskrivelse{
-    margin-left: 20px;
-    margin-right: 20px;
+margin: 35px 20px 0 25px;
 }
-  .breadcrumbs {
-    list-style: none;
-    display: flex;
-    gap: 0.5rem;
-  }
-  .breadcrumbs li:not(:last-child):after {
-    content: ">";
-    margin-left: 0.5rem;
-  }
   .info {
     text-align: left;
     margin-left: 10px;
@@ -107,136 +101,3 @@ a{
 .hide{
     display: none;
 }
-
-/* body{
-    background-color: #D9C5AD;
-} */
-body {
-    background-color: var(--background-color);
-  }
-  
-  h2 {
-    font-family: var(--h2-font);
-  }
-
-:root {
-    --background-color: #d9c5ad;
-    --h2: #c6c6eb;
-    --h2second: black;
-    --h3: #f2500b;
-    --h2-font: Arimo;
-  }
-
-/* nav */
-
-.nav-bar a {
-    text-decoration: none;
-    color: var(--h3);
-    font-weight: bolder;
-    text-transform: uppercase;
-  }
-  
-  .nav-bar a:active {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .nav-menu {
-    display: flex;
-    gap: 60px;
-  }
-  
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--h3);
-    z-index: 1000;
-  }
-  
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  
-  .hamburger.active {
-    z-index: 1000;
-  }
-  
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    margin-left: 80%;
-    margin-top: 5%;
-    position: relative;
-  }
-  
-  .nav-menu {
-    position: absolute;
-    left: -150%;
-    gap: 1%;
-    margin-top: -50px;
-    margin-left: 0px;
-    flex-direction: column;
-    background-color: #fdf2e4;
-    width: 100%;
-    height: 3000px;
-    text-align: center;
-    transition: 0.3s;
-    z-index: -1;
-    padding-top: 120px;
-  }
-  
-  .nav-menu.active {
-    left: 0;
-    z-index: 1000;
-  }
-  /*footer*/
-  .col h3 {
-    color: var(--h2second);
-  }
-  
-  /*stor menu gøres usyndelig*/
-  
-  .stornav {
-    display: none;
-  }
-  
-  @media (min-width: 800px) {
-    .stornav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 3rem 24px;
-    }
-  
-    .stor-menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 70px;
-    }
-  
-    .stor-menu a {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: var(--h3);
-      font-family: var(--h2-font);
-      font-weight: 700;
-    }
-  
-    .hamburger {
-      display: none;
-    }
-  }
-  
