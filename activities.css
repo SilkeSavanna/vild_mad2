@@ -1,0 +1,163 @@
+@media (max-width: 800px) {
+  main {
+    margin-inline: 44px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .front img {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .card {
+    position: relative;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .frontcard h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    color: white;
+  }
+
+  /* Carousel */
+  .carousel_container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel {
+    display: flex;
+    /* transition: transform 05s ease; */
+  }
+
+  .card {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+
+  /* flips cards */
+  .card.active .front {
+    transform: rotateY(180deg);
+  }
+
+  .card.active .back {
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .carousel_nav {
+    text-align: center;
+    height: 500px;
+  }
+
+  .dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: grey;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: orange;
+  }
+
+  /* 
+  button {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .prev {
+    left: 7px;
+  }
+
+  .next {
+    right: 7px;
+  } */
+
+  /* FORMULAR */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  label,
+  textarea,
+  input[type="text"] {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+}
