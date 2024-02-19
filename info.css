@@ -1,3 +1,6 @@
+@font-face {font-family: "arimo"; src: url(font/Arimo-VariableFont_wght.ttf);}
+@font-face {font-family: "inter"; src: url(font/Inter-VariableFont_slnt\,wght.ttf);}
+
 main{
     display: flex;
     flex-direction: center;
@@ -10,6 +13,8 @@ main{
 .right_grid{
     background-color: #F7F9F7;
     border-radius: 0% 3% 3% 0%;
+    font-family: arimo;
+    word-spacing: 0.3rem;
 }
 .left_grid{
     background-color: #fff;
@@ -27,10 +32,20 @@ main{
     grid-template-columns: 1fr 2fr;
     max-width: 700px;
     width: 100%;
-    height: 200px;
+    height: 400px;
     margin: 100px auto;
-    max-height: 430px;
+
   }
+}
+.brand_name{
+    font-family: inter;
+    font-weight: normal;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.beskrivelse{
+    margin-left: 20px;
+    margin-right: 20px;
 }
   .breadcrumbs {
     list-style: none;
@@ -47,6 +62,16 @@ main{
   }
   .info dt {
     font-weight: bold;
+    margin-left: 15px;
+  }
+  .info dd{
+    margin-left: 75px
+  }
+  .info dl{
+    border-top: 1px #A9A9A9 solid;
+    padding-top: 25px;
+    margin-top: 30px;
+    margin-right: 10px;
   }
   .product_name {
     margin-left: 30px;
