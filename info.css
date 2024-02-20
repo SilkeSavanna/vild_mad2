@@ -7,7 +7,6 @@ main{
     background-image: url(img/frontpage_background.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
     margin: 0;
 }
 .right_grid{
@@ -54,7 +53,7 @@ main{
     background-color: #F7F9F7;
   }
   .beskrivelse{
-    font-size: 100%;
+    font-size: 90%;
   }
 }
 .category{

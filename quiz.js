@@ -1,3 +1,5 @@
+
+//spørgsmålne til quizzen
 const questions = [
   {
     question: "Hvilken svamp er den mest udbredte",
@@ -13,8 +15,8 @@ const questions = [
     answers: [
       { text: "Mellem tæerne", correct: false },
       { text: "Under Peters seng", correct: false },
-      { text: "På Crazy Daisy", correct: false },
-      { text: "I Skoven", correct: true },
+      { text: "På Crazy Daisy", correct: true },
+      { text: "I Skoven", correct: false },
     ],
   },
   {
@@ -41,7 +43,7 @@ function startQuiz() {
   nextButton.innerHTML = "Next";
   showQuestion();
 }
-
+// få spørgsmål til at vise sig i quizzen og så den ikke bare viser placeholder text
 function showQuestion() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
@@ -59,14 +61,15 @@ function showQuestion() {
     button.addEventListener("click", selectAnswer);
   });
 }
-
+// fjern at man har svaret + farver og next button
 function resetState() {
   nextButton.style.display = "none";
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
 }
-
+/* både vise hvílket svar der var det rigtige / forkerte når man trykker på et af dem
++ at få next button til at komme frem når man har svaret */
 function selectAnswer(e) {
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
@@ -84,7 +87,7 @@ function selectAnswer(e) {
   }); 
   nextButton.style.display = "block";
 }
-
+//for at vise scoren til sidst efter quizzen og få tekst på + at få nextbutton til at skrive play again
 function showScore() {
   resetState();
   questionElement.innerHTML = `Du fik ${score} ud af ${questions.length}!`;
@@ -92,6 +95,7 @@ function showScore() {
   nextButton.style.display = "block";
 }
 
+//få next button til at vise det næste spørgsmål
 function handleNextButton() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
