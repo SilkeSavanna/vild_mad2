@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Site</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="list.css">
     <link rel="stylesheet" href="sankesideside.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,85 +16,138 @@
 </head>
 
 <body>
+
     <header>
-        <header>
 
-            <nav class="stornav">
-                <img src="" alt="logo">
-                <div class="stor-menu">
+        <nav class="stornav">
+            <img src="" alt="logo">
+            <div class="stor-menu">
+                <a href="sankeside.html">Landscapes</a>
+                <a href="activities.html">Activities</a>
+                <a href="quiz.html">Quiz</a>
+            </div>
+        </nav>
+
+
+
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li class="nav_item">
                     <a href="sankeside.html">Landscapes</a>
+                </li>
+                <li class="nav_item">
                     <a href="activities.html">Activities</a>
+                </li>
+                <li class="nav_item">
                     <a href="quiz.html">Quiz</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="dropdown_flex">
+            <div class="dropdown">
+                <label class="button" for="">SUP LANDSCAPES</label>
+                <div class="dropdown_content">
+                    <a href="">Fence</a>
+                    <a href="">Roadside Verge</a>
+                    <a href="">Grassland</a>
                 </div>
-            </nav>
+            </div>
+
+            <div class=" dropdown">
+                <label class="button" for="">SEASONS</label>
+                <div class="dropdown_content">
+                    <a href="list.html?season=January">January</a>
+                    <a href="list.html?season=February">February</a>
+                    <a href="list.html?season=March">March</a>
+                    <a href="list.html?season=April">April</a>
+                    <a href="list.html?season=May">May</a>
+                    <a href="list.html?season=June">June</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <label class="button" for="">TYPE</label>
+                <div class="dropdown_content">
+                    <a href="">Algae</a>
+                    <a href="">Flower</a>
+                    <a href="">Shrubs and Bushes</a>
+                    <a href="">Coastal plants</a>
+                    <a href="">Mushroom</a>
+                    <a href="">Herbs and Small Plants</a>
+                </div>
+            </div>
+        </div>
+
+        <section>
+
+            <div class="vildmad_container"></div>
+        </section>
+    </main>
 
 
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="" alt="logo">
+            </div>
 
-            <nav class="nav-bar">
-                <ul class="nav-menu">
-                    <li class="nav_item">
-                        <a href="sankeside.html">Landscapes</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="activities.html">Activities</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="quiz.html">Quiz</a>
-                    </li>
+            <div class="col">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">Landscapes</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Quiz</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+            </div>
+
+            <div class="col">
+                <h3>Sankelandskaber</h3>
+                <ul>
+                    <li><a href="#">Open countryside</a></li>
+                    <li><a href="#">Waterfront</a></li>
+                    <li><a href="#">Forest</a></li>
+                    <li><a href="#">City</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col">
+                <h3>Kontakt</h3>
+                <p class="email-id">mm@madfeed.co</p>
+                <h5>+45 26 35 00 17</h5>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/vildmaddk/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/vildmaddk">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
                 </div>
-            </nav>
-        </header>
-        <main></main>
+            </div>
+    </footer>
 
-
-        <footer>
-            <div class="row">
-                <div class="col">
-                    <img src="" alt="logo">
-                </div>
-
-                <div class="col">
-                    <h3>Menu</h3>
-                    <ul>
-                        <li><a href="#">Landscapes</a></li>
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="#">Quiz</a></li>
-                    </ul>
-                </div>
-
-                <div class="col">
-                    <h3>Sankelandskaber</h3>
-                    <ul>
-                        <li><a href="#">Open countryside</a></li>
-                        <li><a href="#">Waterfront</a></li>
-                        <li><a href="#">Forest</a></li>
-                        <li><a href="#">City</a></li>
-                    </ul>
-
-                </div>
-
-                <div class="col">
-                    <h3>Kontakt</h3>
-                    <p class="email-id">mm@madfeed.co</p>
-                    <h5>+45 26 35 00 17</h5>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/vildmaddk/">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/vildmaddk">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </div>
-                </div>
-        </footer>
-
-        <script src="mainscript.js"></script>
+    <script src="mainscript.js"></script>
+    <script src="list.js"></script>
+    <script src="list2.js"></script>
 
 </body>
 
 </html>
+
+<template class="vildmad_template">
+    <article class="vildmad_article">
+
+
+        <div class="vildmad_image_container">
+            <img class="vildmad_image" src="img/pige.jpeg" alt="">
+        </div>
+        <h3 class="vildmad_name">Gooodbeer</h3>
+    </article>
+</template>
