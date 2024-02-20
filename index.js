@@ -1,47 +1,18 @@
-window.onload = function () {
-  var title = document.querySelector(".title");
-  var navs = document.querySelectorAll(".center.none");
-  var fadeInApplied = false;
+//lavet en function, der skal gøres når Dom'en er loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // laver min titel og navs om til const
+  const title = document.querySelector(".title");
+  const navs = document.querySelectorAll(".foraging_nav, .activities_nav, .quiz_nav");
 
-  // Funktion for at fjerne fade-in animation
-  function removeFadeInAnimation(element) {
-    element.classList.remove("fade-in");
-    fadeInApplied = true;
-  }
+  title.classList.add("fade-in"); //Sat en fade-in class, som får titlen til at fade ind, når siden er loadet færdig.
 
-  //En  add eventlistener for, at når musen hover på en nav, skal den fjerne den fade-in animation
-  function addFadeInListener(navElement) {
-    navElement.addEventListener("mouseenter", function () {
-      if (!fadeInApplied) {
-        removeFadeInAnimation(navElement);
-      }
-    });
-  }
+  let delay = 500; //variabel for hvor meget delay, der er imellem hver navs' fade-in (500 millisekunder, som er 0.5 sekunder)
 
-  //funktion for at fjerne klassen "none" (display: none), og tilføjer fade-in animation, som langsomt viser navs på forsiden.
-  setTimeout(function () {
-    title.classList.remove("none");
-    title.classList.add("fade-in");
-
-    //denne fade-in animation er tilføjet på hver af mine navs med: navs.Foreach.
-    navs.forEach(function (nav, index) {
-      setTimeout(function () {
-        nav.classList.remove("none");
-        nav.classList.add("fade-in");
-      }, (index + 1) * 300); //  får et delay på 300 millisekunder imellem dem.
-    });
+  // bruger forEach, som bruger denne function for at få fat i alle mine navs. Animationen "fade-in" og delay er tilføjet.
+  navs.forEach((nav) => {
+    setTimeout(() => {
+      nav.classList.add("fade-in");
+    }, delay);
+    delay += 200; // <-- 200 millisekunder, for hvis jeg gerne vil tilføje mere delay mellem mine navs .
   });
-
-  //Adder kun disse eventlisternes på mine nav, hvis mit mediaquery er aktiv (når den er større end 700px))
-  if (window.matchMedia("(min-width: 700px)").matches) {
-    navs.forEach(addFadeInListener);
-
-    //stopper fade-in animationen, for når musen ikke hover på musen længere (stopper fade-animationen at kicke ind igen)
-    document.querySelectorAll(".center").forEach(function (navElement) {
-      navElement.addEventListener("mouseleave", function () {
-        fadeInApplied = true;
-        navElement.classList.remove("fade-in");
-      });
-    });
-  }
-};
+});

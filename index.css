@@ -1,12 +1,13 @@
 body {
   background-image: url("img/frontpage_background_golden.webp");
-  background-repeat: no-repeat;
-  background-size: 100%, 100%;
-  height: 1000px;
+  background-size: cover;
 }
 
 .main_front {
   background-color: none;
+}
+h1 {
+  margin-top: 30px;
 }
 
 a,
@@ -17,6 +18,13 @@ p {
 img {
   width: 100%;
   height: auto;
+}
+footer {
+  background-color: var(--background-color);
+}
+
+.background_mobile {
+  display: none;
 }
 
 .title {
@@ -32,6 +40,7 @@ h2 {
   font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 35px;
   margin: 0;
   text-decoration: none;
   color: white;
@@ -74,8 +83,8 @@ h2 {
 .center {
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
-  padding: 10px;
+  width: 35%;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -189,5 +198,83 @@ hr {
 
   footer {
     display: block;
+  }
+  body {
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    height: 1000px;
+  }
+
+  .center {
+    width: 20%;
+  }
+  .background_mobile {
+    display: block;
+  }
+}
+
+/* Add fade-in animation class to title and navs */
+.title,
+.foraging_nav,
+.activities_nav,
+.quiz_nav {
+  opacity: 0; /* Set initial opacity to 0 */
+}
+
+/* Title fade-in animation */
+.title.fade-in {
+  animation: fadeInTitle 1s forwards;
+}
+
+/* Nav fade-in animations with staggered delay */
+.foraging_nav.fade-in,
+.activities_nav.fade-in,
+.quiz_nav.fade-in {
+  animation: fadeInNav 0.7s forwards;
+}
+
+.foraging_nav.fade-in {
+  animation-delay: 0.3s; /* Delay the animation for foraging_nav */
+}
+
+.activities_nav.fade-in {
+  animation-delay: 0.4s; /* Stagger the delay for activities_nav */
+}
+
+.quiz_nav.fade-in {
+  animation-delay: 0.5s; /* Stagger the delay for quiz_nav */
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add hover effect back to navs */
+.foraging_nav:hover .svg,
+.activities_nav:hover .svg,
+.quiz_nav:hover .svg {
+  animation: pulse-hover 1.2s infinite alternate;
+}
+
+@keyframes pulse-hover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
   }
 }
