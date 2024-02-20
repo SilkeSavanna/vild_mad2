@@ -57,18 +57,21 @@ card.addEventListener("click", function () {
   }
 });
 
-// FORMULAR - MANGLER
+// FORMULAR
 function toggleFormFields() {
-  var registrationType = document.getElementById("registrationType").value;
-  var elevFields = document.getElementById("elevFields");
-  var klasseFields = document.getElementById("klasseFields");
+  var registrationType = document.getElementById("hvem").value;
+  var elevFields = document.getElementById("studentFields");
+  var klasseFields = document.getElementById("ClassFields");
 
-  if (registrationType === "elev") {
+  if (registrationType === "student") {
     elevFields.style.display = "block";
     klasseFields.style.display = "none";
-  } else if (registrationType === "klasse") {
+  } else if (registrationType === "class") {
     elevFields.style.display = "none";
     klasseFields.style.display = "block";
+  } else {
+    elevFields.style.display = "none";
+    klasseFields.style.display = "none";
   }
 }
 

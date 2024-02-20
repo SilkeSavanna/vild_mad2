@@ -23,11 +23,6 @@
 
 /* MOBILE */
 @media (max-width: 800px) {
-  main {
-    margin-inline: 25px;
-    /* styles main får den hvide frem ??? */
-  }
-
   h1 {
     text-align: center;
     margin: 25px 0;
@@ -57,6 +52,14 @@
     height: 100%;
     display: none;
     transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+    /* skaler card visuelt clickable cue */
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    /* skaler 1.1x dens oprindelige str. */
+    transform: scale(1.1);
   }
 
   .card img {
@@ -96,6 +99,7 @@
     font-weight: 400;
     color: #f2500b;
     transition: transform 0.2s ease-in-out;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   .btn:active,
@@ -104,15 +108,15 @@
   }
 
   .btn:hover {
-    transform: translateY(-50%) scale(0.96);
+    transform: translateY(-50%) scale(1.5);
   }
 
   .prev {
-    left: -7%;
+    left: 3%;
   }
 
   .next {
-    right: -7%;
+    right: 3%;
   }
 
   .dots {
@@ -120,6 +124,7 @@
     align-items: center;
     justify-content: center;
     gap: 35px;
+    margin-bottom: 45px;
   }
 
   .dots .dot {
@@ -172,6 +177,10 @@
     background-size: cover;
     color: #ffffff;
     transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .card_back h2 {
@@ -188,7 +197,8 @@
     font-family: "Arimo", sans-serif;
     line-height: 22px;
     text-align: left;
-    margin: 20px 10px;
+    margin: 0 auto;
+    padding-bottom: 12.5px;
   }
 
   .card_back p a {
@@ -199,52 +209,71 @@
     display: block;
     position: absolute;
     right: 65px;
-    top: 385px;
+    top: 365px;
     width: 10%;
     height: auto;
   }
 
   /* FORMULAR */
+  .formular {
+    background-image: url(img/activities_img/formular.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px;
+    margin: 25px 0;
+  }
+
+  #activity_ideas {
+    margin-inline: 0;
+  }
+
   form {
     max-width: 600px;
     margin: 0 auto;
   }
 
-  .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  .formular h2 {
+    margin-bottom: 20px;
+    width: 100%;
+    top: 75%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Arimo", sans-serif;
+    color: #ffffff;
+    font-size: 26px;
   }
 
-  h1,
-  h2,
-  h3 {
-    color: #007bff;
+  .formular label {
+    color: #ffffff;
   }
 
   label,
   textarea,
   input[type="text"] {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 
   label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+    text-shadow: 1px 1px 1px black;
+    font-family: "Arimo", sans-serif;
   }
 
   input[type="text"],
   textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  /* ændrer fokus farve fra standard blå til orange*/
+  input[type="text"]:focus,
+  textarea:focus {
+    outline: 1px solid #f2500b;
   }
 
   textarea {
@@ -252,7 +281,7 @@
   }
 
   input[type="submit"] {
-    background-color: #007bff;
+    background-color: #f2500b;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -262,5 +291,18 @@
 
   input[type="submit"]:hover {
     background-color: #45a049;
+  }
+
+  #hvem {
+    padding: 10px 20px;
+    margin-bottom: 12.5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f2500b;
+    color: #ffffff;
+  }
+
+  input {
+    color: #ccc;
   }
 }

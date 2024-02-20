@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get("season");
 
 fetch(
-  `https://lzlmyauwovywksmqbdpd.supabase.co/rest/v1/data_vildmad?season=cs.["${query}"]`,
+  `https://lzlmyauwovywksmqbdpd.supabase.co/rest/v1/data_vildmad?seasons=cs.["${query}"]`,
   {
     headers: {
       apikey:
