@@ -23,11 +23,6 @@
 
 /* MOBILE */
 @media (max-width: 800px) {
-  .override {
-    margin-inline: 25px;
-    background: none;
-  }
-
   h1 {
     text-align: center;
     margin: 25px 0;
@@ -221,8 +216,11 @@
 
   /* FORMULAR */
   .formular {
-    background-image: url(img/activities_img/backcard.webp);
+    background-image: url(img/activities_img/formular.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 25px;
+    margin: 25px 0;
   }
 
   #activity_ideas {
@@ -235,7 +233,7 @@
   }
 
   .formular h2 {
-    margin-bottom: 12.5px;
+    margin-bottom: 20px;
     width: 100%;
     top: 75%;
     text-transform: uppercase;
@@ -259,6 +257,8 @@
   label {
     display: block;
     margin-bottom: 7px;
+    text-shadow: 1px 1px 1px black;
+    font-family: "Arimo", sans-serif;
   }
 
   input[type="text"],
@@ -270,10 +270,10 @@
     border-radius: 10px;
   }
 
-  /* Change the default blue outline color on focus */
+  /* ændrer fokus farve fra standard blå til orange*/
   input[type="text"]:focus,
   textarea:focus {
-    outline: 1px solid #f2500b; /* Change this to your desired color and adjust the style as needed */
+    outline: 1px solid #f2500b;
   }
 
   textarea {
