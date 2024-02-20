@@ -34,7 +34,7 @@ fetch("https://lzlmyauwovywksmqbdpd.supabase.co/rest/v1/products?id=", {
 
 
 .then((res) => res.json())
-.then((json) => showProduct(json)); // Antar at data er en array med ett produkt
+.then((json) => showProduct(json)); // Antar at data er en array med et produkt
 
 function showProduct(product) {
     console.log(product);
