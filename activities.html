@@ -4,11 +4,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="activities.css">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        rel="stylesheet">
+    <title>Activities</title>
 </head>
 
 <body>
+    <header>
+        <nav class="stornav">
+            <!-- <img src="" alt="logo"> -->
+            <div class="stor-menu">
+                <a href="sankeside.html">Landscapes</a>
+                <a href="activities.html">Activities</a>
+                <a href="quiz.html">Quiz</a>
+            </div>
+        </nav>
 
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li class="nav_item">
+                    <a href="sankeside.html">Landscapes</a>
+                </li>
+                <li class="nav_item">
+                    <a href="activities.html">Activities</a>
+                </li>
+                <li class="nav_item">
+                    <a href="quiz.html">Quiz</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Activities</h1>
+
+        <div class="carousel_flip_container">
+            <div class="carousel_inner">
+                <div class="card active">
+                    <div class="card_front">
+                        <img src="img/activities_img/detektivskema.webp"
+                            alt="Stemnings billede til detektivskema aktiviteten">
+
+                        <h2>DETECTIVE SHEET</h2>
+                    </div>
+                    <div class="card_back">
+                        <p>"The Detective Sheet" is an educational resource designed for teaching about the
+                            context
+                            of
+                            plants,
+                            focusing on "foraging
+                            sites" and "foraging landscapes."</p>
+
+                        <p>
+                            Before you begin: <br>
+                            ᨒ Make sure to have your teacher print out the PDF or download it to your mobile
+                            device.
+                            <br>
+                            ᨒ Remember to bring a pencil and eraser if you're working on paper. <br>
+                            ᨒ Keep the website, handy for reference, while completing the task. <br>
+                            ᨒ Your teacher will allocate a specific amount of time for you to complete the
+                            assignment.
+                            <br>
+                            ᨒ Always remember to ask your teachers for guidance before foraging anything or if
+                            you're
+                            unsure
+                            about
+                            anything.
+                        </p>
+
+                        <p><a href="img/activities_img/9_Elev_Undervisningsforlob_-_Detektivskema.pdf" target="blank"
+                                class="pdf">DOWNLOAD
+                                PDF</a></p>
+
+                        <img id="butterfly" src="img/activities_img/butterfly.svg" alt="butterfly illustration">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_front">
+                        <img src="img/activities_img/detektivskema.webp"
+                            alt="Stemnings billede til detektivskema aktiviteten">
+
+                        <h2>DRAW</h2>
+                    </div>
+                    <div class="card_back">
+
+                        <h2>
+                            Draw
+                        </h2>
+
+                        <p>wee</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_front">
+                        <img src="img/activities_img/detektivskema.webp"
+                            alt="Stemnings billede til detektivskema aktiviteten">
+
+                        <h2>MASTERCHEF</h2>
+                    </div>
+                    <div class="card_back">
+
+                        <h2>
+                            Masterchef
+                        </h2>
+
+                        <p>wee woo</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn prev">❮</button>
+            <button class="btn next">❯</button>
+            <div class="dots"></div>
+        </div>
+        <!-- 
+    Formular
+ -->
+        <section class="formular">
+            <h2>Submit Your Activity Ideas</h2>
+
+            <form id="activity_ideas" method="post">
+                <label for="hvem">First and foremost, who is submitting?</label>
+                <select id="hvem" onchange="toggleFormFields()">
+                    <option value="who">Choose here</option>
+                    <option value="class">Class</option>
+                    <option value="student">Student</option>
+                </select>
+
+                <label for="school_name">School Name:</label>
+                <input type="text" id="school_name" name="school_name" value="Prins Henriks Skole" required>
+
+                <label for="school_address">School Address:</label>
+                <input type="text" id="school_address" name="school_address"
+                    value="Rolighedsvej 39 DK-1958 Frederiksberg C">
+
+                <label for="sci">School Contact Information:</label>
+                <input type="text" id="sci" name="sci" value="lfph@lfph.dk | +4533212048" required>
+
+                <div id="studentFields" style="display:none;">
+                    <label for="stu_name">Student’s First Name:</label>
+                    <input type="text" id="stu_name" name="stu_name" value="Freja" required>
+
+                    <label for="stu_age">Student’s Age:</label>
+                    <input type="text" id="stu_age" name="stu_age" required>
+                </div>
+
+                <div id="ClassFields" style="display:none;">
+                    <label for="grade_lvl">Grade Level:</label>
+                    <input type="text" id="grade_lvl" name="grade_lvl" value="7th grade" required>
+
+                    <label for="number_stud">Number of Students in the Class:</label>
+                    <input type="text" id="number_stud" name="number_stud" required>
+                </div>
+
+
+                <label for="activity">Activity Ideas:</label>
+                <textarea id="activity" name="activity" required></textarea>
+
+                <input type="submit" value="Submit ➡">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="row">
+            <div class="col">
+                <!-- <img src="" alt="logo"> -->
+            </div>
+
+            <div class="col">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">Landscapes</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Quiz</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Sankelandskaber</h3>
+                <ul>
+                    <li><a href="#">Open countryside</a></li>
+                    <li><a href="#">Waterfront</a></li>
+                    <li><a href="#">Forest</a></li>
+                    <li><a href="#">City</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col">
+                <h3>Kontakt</h3>
+                <p class="email-id">mm@madfeed.co</p>
+                <h5>+45 26 35 00 17</h5>
+                <div class="social-icons">
+                    <!-- <a href="https://www.instagram.com/vildmaddk/"> -->
+                    <i class="fa-brands fa-instagram"></i>
+                    <!-- </a> -->
+                    <!-- <a href="https://www.facebook.com/vildmaddk"> -->
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <!-- </a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="carousel_formular.js"></script>
+    <script src="mainscript.js"></script>
 </body>
 
 </html>
