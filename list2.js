@@ -40,6 +40,8 @@ function showVildmad(productJSON) {
     productClone = vildmadTemplate.cloneNode(true).content;
     productClone.querySelector(".vildmad_image").src = product.image;
     productClone.querySelector(".vildmad_name").textContent = product.name;
+    productClone.querySelector("a").href = `info.html?id=${product.id}`;
     vildmadContainer.appendChild(productClone);
+    
   });
 }
