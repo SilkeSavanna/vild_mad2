@@ -5,11 +5,17 @@
 }
 
 :root {
+  /* baggrundsfarve secondary */
   --background-color: #d9c5ad;
+  /*evt. h2 farve primary  */
   --h2: #c6c6eb;
+  /* h2 farve secondary */
   --h2second: black;
+  /* h3 farve  */
   --h3: #f2500b;
+  /* h2 font-family */
   --h2-font: Arimo;
+  /* baggrundsfarve primary */
   --backgroundmain: #f2dcc4;
 }
 
