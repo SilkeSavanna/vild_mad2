@@ -23,9 +23,6 @@ main {
   padding-top: 10px;
 }
 
-header {
-  margin-bottom: 10px;
-}
 h2 {
   font-family: var(--h2-font);
 }
@@ -174,7 +171,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 24px;
+    padding: 1rem 24mm;
   }
 
   .stor-menu {

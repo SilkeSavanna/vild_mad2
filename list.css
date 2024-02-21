@@ -95,6 +95,7 @@ text-decoration: none;
   font-family: var(--h2-font);
   font-size: 15px;
   top: 0;
+  text-align: center;
 }
 
 @media (min-width: 800px) {
