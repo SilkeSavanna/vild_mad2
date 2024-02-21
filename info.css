@@ -4,20 +4,18 @@
 main{
     display: flex;
     flex-direction: center;
-    background-image: url(img/aerial-view-green-forest\ 2.webp);
+    background-image: url(img/frontpage_background.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 600px;
     margin: 0;
 }
 .right_grid{
-    background-color: #F7F9F7;
+
     border-radius: 0% 3% 3% 0%;
     font-family: arimo;
     word-spacing: 0.3rem;
 }
 .left_grid{
-    background-color: #fff;
     text-align: center;
     border-radius: 3% 0% 0% 3%;
 }
@@ -27,6 +25,16 @@ main{
     height: auto;
     grid-row: 1/3;
   }
+  @media screen and (max-width: 600px) {
+.grid{
+  background-color: #F7F9F7;
+  margin: 50px 35px 50px 35px;
+}
+.beskrivelse{
+  font-size: 0.7em;
+}
+
+  }
   @media screen and (min-width: 600px) {
   .grid{
     display: grid;
@@ -35,7 +43,15 @@ main{
     width: 100%;
     height: 400px;
     margin: 100px auto;
-
+  }
+  .left_grid{
+    background-color: #fff;
+  }
+  .right_grid{
+    background-color: #F7F9F7;
+  }
+  .beskrivelse{
+    font-size: 90%;
   }
 }
 .category{
@@ -45,10 +61,11 @@ main{
     font-family: inter;
     font-weight: normal;
     font-size: 1.5em;
-    margin: 15px 0 15px 20px
+    margin: 20px 0 15px 20px
 }
 .beskrivelse{
-margin: 35px 20px 0 25px;
+margin: 25px 20px 0 25px;
+
 }
   .info {
     text-align: left;
@@ -59,7 +76,7 @@ margin: 35px 20px 0 25px;
     margin-left: 15px;
   }
   .info dd{
-    margin-left: 75px
+    margin-left: 15px
   }
   .info dl{
     border-top: 1px #A9A9A9 solid;
@@ -72,12 +89,13 @@ margin: 35px 20px 0 25px;
     font-size: 2.5rem;
   }
   
-  
   label {
     display: block;
     margin-bottom: 10px;
   }
-  
+/*   .sæson{
+    max-width: 15ch;
+  } */
   select {
     display: block;
     width: 100%;
@@ -100,4 +118,21 @@ a{
 }
 .hide{
     display: none;
+}
+
+.funfact{
+margin: 20px 0 10px 25px;
+font-weight: lighter;
+font-size: 1em;
+word-spacing: 0.1em;
+}
+.fact{
+margin: 0 0 10px 25px;
+font-size: 1.25em;
+max-width: 20ch;
+}
+.advarsel{
+font-size: .8em;
+margin: 10px 0 20px 15px;
+color: red;
 }
