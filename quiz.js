@@ -2,30 +2,30 @@
 //spørgsmålne til quizzen
 const questions = [
   {
-    question: "Hvilken svamp er den mest udbredte",
+    question: "Which mushroom is the most widespread?",
     answers: [
-      { text: "Karl Johan", correct: false },
-      { text: "Rød Fluesvamp", correct: false },
-      { text: "Kantarel", correct: true },
-      { text: "Broget Skørhat", correct: false },
+      { text: "Porcini", correct: false },
+      { text: "Red fly agaric", correct: false },
+      { text: "Chanterelle", correct: true },
+      { text: "Motley Fool Hat", correct: false },
     ],
   },
   {
-    question: "Hvor finder man primært svampe",
+    question: "Where are mushrooms primarily found?",
     answers: [
-      { text: "Mellem tæerne", correct: false },
-      { text: "Under Peters seng", correct: false },
-      { text: "På Crazy Daisy", correct: true },
-      { text: "I Skoven", correct: false },
+      { text: "Between the toes", correct: false },
+      { text: "Under peters bed", correct: false },
+      { text: "At Crazy Daisy", correct: true },
+      { text: "In the forest", correct: false },
     ],
   },
   {
-    question: "Hvad er grønnest",
+    question: "What is greenest?",
     answers: [
-      { text: "Den underlige klat på din morfars kind", correct: false },
-      { text: "Alans ansigt med hovedet i tønden", correct: false },
-      { text: "Blade i sen forår", correct: true },
-      { text: "Persillesovsen din mormor lavede", correct: true },
+      { text: "The strange patch on your grandfather's cheek.", correct: false },
+      { text: "Alan's face with his head in the barrel.", correct: false },
+      { text: "Leaves in late spring.", correct: true },
+      { text: "The parsley sauce your grandmother made.", correct: true },
     ],
   },
 ];
@@ -90,7 +90,7 @@ function selectAnswer(e) {
 //for at vise scoren til sidst efter quizzen og få tekst på + at få nextbutton til at skrive play again
 function showScore() {
   resetState();
-  questionElement.innerHTML = `Du fik ${score} ud af ${questions.length}!`;
+  questionElement.innerHTML = `Your ${score} os, out of ${questions.length}!`;
   nextButton.innerHTML = "Play Again";
   nextButton.style.display = "block";
 }
