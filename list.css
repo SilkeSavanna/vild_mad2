@@ -44,7 +44,7 @@
   font-size: 15px;
 }
 .link {
-text-decoration: none;
+  text-decoration: none;
 }
 
 .button {
@@ -172,8 +172,10 @@ text-decoration: none;
     border-radius: 40px;
     background-color: #fffef3;
     border-radius: 50%;
-    width: 80%;
-    height: 35vh;
+    max-width: 100%;
+    max-height: 40vh;
+    min-width: 90%;
+    min-height: 35vh;
   }
 
   .vildmad_image_container {
