@@ -26,6 +26,10 @@ footer {
 .background_mobile {
   display: none;
 }
+.logo_frontpage img {
+  margin-left: 20px;
+  width: 90%;
+}
 
 .title {
   font-family: "Londrina Shadow", sans-serif;
