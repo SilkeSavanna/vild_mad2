@@ -17,18 +17,32 @@ function init() {
   vildmadContainer = document.querySelector(".vildmad_container");
   console.log("vildmad_container", vildmadContainer);
 
-  //starter med at hente dataen fra URL & then bruges til at kalde en funktion når dataten er hentet. Herefter laver man responset om til JSON//
-  fetch(productURL, {
-    headers: {
-      apikey: apikey,
-    },
-  })
-    .then(function (response) {
-      return response.json();
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get("season");
+
+  if (!query) {
+    fetch(productURL, {
+      headers: {
+        apikey: apikey,
+      },
     })
-    .then(function (json) {
-      showVildmad(json);
-    });
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        showVildmad(json);
+      });
+  } else {
+    let apiUrl = productURL + `?seasons=cs.["${query}"]`;
+
+    fetch(apiUrl, {
+      headers: {
+        apikey: apikey,
+      },
+    })
+      .then((res) => res.json())
+      .then(showVildmad);
+  }
 }
 
 function showVildmad(productJSON) {
@@ -42,6 +56,16 @@ function showVildmad(productJSON) {
     productClone.querySelector(".vildmad_name").textContent = product.name;
     productClone.querySelector("a").href = `info.html?id=${product.id}`;
     vildmadContainer.appendChild(productClone);
-    
   });
+
+  document.querySelectorAll(".button1").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const season = event.target.textContent.trim();
+      goToSeason(season);
+    });
+  });
+}
+
+function goToSeason(season) {
+  location.href = `list.html?season=${season}`;
 }
