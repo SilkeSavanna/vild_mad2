@@ -11,4 +11,4 @@ fetch(
   }
 )
   .then((res) => res.json())
-  .then(console.log);
+  .then(showVildmad);
