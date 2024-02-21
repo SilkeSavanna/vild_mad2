@@ -172,6 +172,10 @@ hr {
   h2 {
     font-size: 35px;
   }
+  footer .col img{
+    width: 100%;
+    height: auto;
+  }
 
   .title,
   .foraging_nav,
