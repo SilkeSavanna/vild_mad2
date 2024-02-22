@@ -14,7 +14,7 @@ const questions = [
     question: "Where are mushrooms primarily found?",
     answers: [
       { text: "Between the toes", correct: false },
-      { text: "Under peters bed", correct: false },
+      { text: "Under Miv´s bed", correct: false },
       { text: "At Crazy Daisy", correct: true },
       { text: "In the forest", correct: false },
     ],
@@ -23,7 +23,7 @@ const questions = [
     question: "What is greenest?",
     answers: [
       { text: "The strange patch on your grandfather's cheek.", correct: false },
-      { text: "Alan's face with his head in the barrel.", correct: false },
+      { text: "Kim´s face with his head in the barrel.", correct: false },
       { text: "Leaves in late spring.", correct: true },
       { text: "The parsley sauce your grandmother made.", correct: true },
     ],
