@@ -90,7 +90,7 @@ function selectAnswer(e) {
 //for at vise scoren til sidst efter quizzen og få tekst på + at få nextbutton til at skrive play again
 function showScore() {
   resetState();
-  questionElement.innerHTML = `Your ${score} os, out of ${questions.length}!`;
+  questionElement.innerHTML = `Your score is ${score}, out of ${questions.length}!`;
   nextButton.innerHTML = "Play Again";
   nextButton.style.display = "block";
 }
