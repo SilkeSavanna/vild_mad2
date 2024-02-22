@@ -16,7 +16,7 @@ const questions = [
       { text: "Between the toes", correct: false },
       { text: "Under Miv´s bed", correct: false },
       { text: "At Crazy Daisy", correct: true },
-      { text: "In the forest", correct: false },
+      { text: "In the forest", correct: true },
     ],
   },
   {
